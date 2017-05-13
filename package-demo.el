@@ -53,7 +53,7 @@
   package-demo-actions)
 
 (defun package-demo-do (action &rest args)
-  (when-let (func (gethash action package-demo-actions))
+  (-when-let (func (gethash action package-demo-actions))
     (apply func args)))
 
 (defun package-demo-do- (action &optional args)
